@@ -11,7 +11,7 @@ auto_mapping_system/
 ├── auto_explorer.py                    # AI探索ノード
 ├── auto_mapping.launch.py              # 統合起動ファイル
 ├── package.xml                         # パッケージ設定
-└── setup.py                           # セットアップファイル
+└── setup.py                            # セットアップファイル
 ```
 
 ## システム要件
@@ -35,54 +35,6 @@ auto_mapping_system/
 - Docker Desktopがインストール済み
 - WSL2が有効化済み
 
-### 1. リポジトリのクローン
-```powershell
-git clone <このリポジトリのURL>
-cd auto_mapping_system
-```
-
-### 2. WSL2メモリ設定（推奨）
-`C:\Users\<ユーザー名>\.wslconfig` ファイルを作成/編集:
-```ini
-[wsl2]
-memory=8GB
-swap=16GB
-```
-**重要**: 設定後はPCを再起動してください。
-
-### 3. Dockerコンテナの起動
-```powershell
-# PowerShellスクリプトを実行
-.\run_final_assignment_container.ps1
-```
-
-### 4. VNC接続
-ブラウザで以下にアクセス:
-```
-http://localhost:6080/
-```
-
-### 5. セットアップスクリプトの実行
-VNCコンソールで以下を実行:
-```bash
-# このリポジトリのセットアップスクリプトを実行
-cd ~
-git clone <このリポジトリのURL> auto_mapping_repo
-cd auto_mapping_repo
-chmod +x setup.sh
-./setup.sh
-```
-
-### 6. システムの実行
-```bash
-# 自動マッピング開始
-ros2 launch auto_mapping_system auto_mapping.launch.py
-```
-
-**🎉 成功！** Gazebo、RViz、自動探索が同時に開始されます。
-
-## 詳細セットアップ手順
-
 ### 1. Docker環境の準備
 
 #### Docker Imageの取得
@@ -90,7 +42,7 @@ ros2 launch auto_mapping_system auto_mapping.launch.py
 docker pull airobotbook/ros2-desktop-ai-robot-book-humble
 ```
 
-#### WSL2メモリ設定 (推奨)
+#### WSL2メモリ設定 (環境に合わせて設定)
 `C:\Users\<ユーザー名>\.wslconfig` ファイルを作成/編集:
 ```ini
 [wsl2]
@@ -349,29 +301,9 @@ source install/setup.bash
 ### Docker メモリ不足
 WSL2設定ファイル `C:\Users\<ユーザー名>\.wslconfig` でメモリを増量
 
-## システム特徴
-
-### 創造性
-- 多層的状態管理による複雑な行動パターン
-- 予測的障害物回避
-- 学習的探索戦略
-
-### 技術力
-- 高精度センサー処理（360度LiDAR）
-- リアルタイム制御（10Hz更新）
-- ロバスト環境適応
-
-### 実用性
-- 完全自律動作
-- 災害現場での応用可能性
-- 屋内ナビゲーションシステムへの展開
-
-## ライセンス
-MIT
-
 ## 作者
 Physical AI講座 最終課題
 
 ---
 
-**注意**: このシステムはDocker + WSL2環境で動作確認済みです。
+**注意**: このシステムはDocker + WSL2環境で動作確認しました。
