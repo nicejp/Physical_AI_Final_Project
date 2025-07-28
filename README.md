@@ -124,6 +124,9 @@ source ~/.bashrc
 mkdir -p ~/auto_mapping_ws/src
 cd ~/auto_mapping_ws/src
 
+# このリポジトリをクローン
+git clone https://github.com/nicejp/Physical_AI_Final_Project.git
+
 # TurtleBot3シミュレーションパッケージのクローン
 git clone -b humble https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 ```
@@ -143,8 +146,8 @@ ros2 pkg create --build-type ament_python auto_mapping_system --dependencies rcl
 ```bash
 mkdir -p ~/auto_mapping_ws/src/auto_mapping_system/auto_mapping_system
 
-# auto_explorer.pyを作成 (提供されたコードを使用)
-vi ~/auto_mapping_ws/src/auto_mapping_system/auto_mapping_system/auto_explorer.py
+# auto_explorer.pyをコピー
+cp Physical_AI_Final_Project/auto_mapping_system/auto_explorer.py ~/auto_mapping_ws/src/auto_mapping_system/auto_mapping_system/
 chmod +x ~/auto_mapping_ws/src/auto_mapping_system/auto_mapping_system/auto_explorer.py
 
 # __init__.pyを作成
@@ -156,7 +159,7 @@ touch ~/auto_mapping_ws/src/auto_mapping_system/auto_mapping_system/__init__.py
 mkdir -p ~/auto_mapping_ws/src/auto_mapping_system/launch
 
 # auto_mapping.launch.pyを作成 (提供されたコードを使用)
-vi ~/auto_mapping_ws/src/auto_mapping_system/launch/auto_mapping.launch.py
+cp Physical_AI_Final_Project/auto_mapping_system/auto_mapping.launch.py ~/auto_mapping_ws/src/auto_mapping_system/launch/
 chmod +x ~/auto_mapping_ws/src/auto_mapping_system/launch/auto_mapping.launch.py
 ```
 
@@ -164,12 +167,12 @@ chmod +x ~/auto_mapping_ws/src/auto_mapping_system/launch/auto_mapping.launch.py
 
 #### package.xml
 ```bash
-vi ~/auto_mapping_ws/src/auto_mapping_system/package.xml
+cp Physical_AI_Final_Project/auto_mapping_system/package.xml ~/auto_mapping_ws/src/auto_mapping_system/
 ```
 
 #### setup.py
 ```bash
-vi ~/auto_mapping_ws/src/auto_mapping_system/setup.py
+cp Physical_AI_Final_Project/auto_mapping_system/setup.py ~/auto_mapping_ws/src/auto_mapping_system/
 ```
 
 #### resourceファイル
