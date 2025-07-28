@@ -5,8 +5,8 @@ TurtleBot3を使用したAI駆動の自律探索アルゴリズムによる自�
 
 ## ファイル構成
 ```
+README.md                               # このファイル
 auto_mapping_system/
-├── README.md                           # このファイル
 ├── run_final_assignment_container.ps1  # Docker起動スクリプト
 ├── auto_explorer.py                    # AI探索ノード
 ├── auto_mapping.launch.py              # 統合起動ファイル
