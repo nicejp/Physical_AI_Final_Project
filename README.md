@@ -52,10 +52,10 @@ swap=128GB
 ```
 
 #### コンテナ起動
-PowerShellスクリプト `run_ai_robot_container.ps1` を実行:
+PowerShellスクリプト `run_final_assignment_container.ps1` を実行:
 ```powershell
 # スクリプトを実行してコンテナを起動
-.\run_ai_robot_container.ps1
+.\run_final_assignment_container.ps1
 ```
 
 #### VNC接続
