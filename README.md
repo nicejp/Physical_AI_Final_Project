@@ -80,7 +80,7 @@ sudo vi /etc/ssh/ssh_config
 sudo service ssh start
 ```
 
-#### ROS2キーの修正 (エラーが出る場合、メッセージのキーを確認！)
+#### ROS2キーの修正 (エラーが出る場合、メッセージのキーを確認！以下は対処例)
 ```bash
 sudo apt-key del F42ED6FBAB17C654
 sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
