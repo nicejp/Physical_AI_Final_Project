@@ -3,7 +3,7 @@
   <name>auto_mapping_system</name>
   <version>0.0.1</version>
   <description>TurtleBot3 automatic mapping system for Physical AI final project</description>
-  <maintainer email="your@email.com">Your Name</maintainer>
+  <maintainer email="kohkenyamamo10@gmail.com">nicejp</maintainer>
   <license>MIT</license>
 
   <depend>rclpy</depend>
